@@ -6,7 +6,7 @@ from gtts import gTTS
 import pygame
 
 
-palm.configure(api_key='AIzaSyDBd-Rq3Rwri3SqtMe6aeF_-vAH2c0Rajg')
+palm.configure(api_key='<API_KEY-PaLM>')
 # Parameters for audio recording and playback
 duration = 10  # Recording duration in seconds
 fs = 44100    # Sampling frequency
@@ -23,7 +23,7 @@ def save_audio_to_file(audio_data, filename):
     wavio.write(filename, audio_data, fs, sampwidth=2)
 
 def transcribe_audio(filename):
-    aai.settings.api_key = "f6fbee84cf894c56ba333f2c0b1e2c8a"
+    aai.settings.api_key = "<API_KEY-Assemblyai>"
     transcriber = aai.Transcriber()
     transcript = transcriber.transcribe(filename)
 
